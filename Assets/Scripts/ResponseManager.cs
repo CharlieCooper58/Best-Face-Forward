@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class ResponseManager : MonoBehaviour
 {
-    private Part[] face_parts;
-    private List<string> prompt_response;
+    public static ResponseManager rM;
+    [SerializeField] private Part[] face_parts;
+    [SerializeField] private List<string> prompt_response;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        rM = this;
         prompt_response = new List<string>();
         face_parts = new Part[3]; //Eye, nose, mouth
         print(face_parts[0]);
@@ -20,13 +22,16 @@ public class ResponseManager : MonoBehaviour
         
     }
     public bool AddItem(Part new_part){
-        for(int i = 0; i < face_parts.Length; i++){
-            if(face_parts[i] == null || face_parts[i].GetPartType() == new_part.GetPartType()){
+        /*for(int i = 0; i < face_parts.Length; i++){
+            if(face_parts[i].GetPartType() == new_part.GetPartType()){
                 return false;
             }
+        }*/
+        if(face_parts[(int)new_part.GetPartType()] == null){
+            face_parts[(int)new_part.GetPartType()] = new_part;
+            return true;
         }
-        face_parts[(int)new_part.GetPartType()] = new_part;
-        return true;
+        return false;
     }
     public void RemoveItem(Part old_part){
         face_parts[(int)old_part.GetPartType()] = null;

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4260182318727125321}
   m_Layer: 5
   m_Name: DraggableObject
-  m_TagString: merge
+  m_TagString: home
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,3 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a08e7e56acb402c899457ce8f9e357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  drop_name:
+  - merge
+  - home
+  my_part: {fileID: 11400000, guid: 695aa5f3662a24586ba3b6a86e017fec, type: 2}

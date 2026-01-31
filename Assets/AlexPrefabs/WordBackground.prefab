@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 4153092235827007470}
   - component: {fileID: 9172487550689971892}
   - component: {fileID: 8747242595226241974}
-  - component: {fileID: 183322049831665829}
+  - component: {fileID: 364708542422712449}
   m_Layer: 5
   m_Name: WordBackground
   m_TagString: Untagged
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &183322049831665829
+--- !u!114 &364708542422712449
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4280085979374180688}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90a08e7e56acb402c899457ce8f9e357, type: 3}
+  m_Script: {fileID: 11500000, guid: 57a974c38b4f2456e844cb84c363bf4b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DraggableItem
+  m_EditorClassIdentifier: Assembly-CSharp::DraggableWord
   my_part: {fileID: 11400000, guid: 4d7c5c75867844b0ca92cad3c4d4240e, type: 2}

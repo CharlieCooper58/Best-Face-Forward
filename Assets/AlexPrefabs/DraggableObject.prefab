@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 8506166783163501830}
   - component: {fileID: 7999158467393911096}
   - component: {fileID: 1079926319887835040}
-  - component: {fileID: 5925560384794966272}
+  - component: {fileID: 4726263130307084815}
   m_Layer: 5
   m_Name: DraggableChild
   m_TagString: Untagged
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5925560384794966272
+--- !u!114 &4726263130307084815
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,10 +161,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4228434353643816178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90a08e7e56acb402c899457ce8f9e357, type: 3}
+  m_Script: {fileID: 11500000, guid: 8cc81a8f4724c4d608c6ef1903731f86, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
-  drop_name:
-  - merge
-  - home
-  my_part: {fileID: 11400000, guid: 695aa5f3662a24586ba3b6a86e017fec, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::DraggableImage
+  my_part: {fileID: 11400000, guid: 10f876cd0a1f1452e97821a6bef97830, type: 2}

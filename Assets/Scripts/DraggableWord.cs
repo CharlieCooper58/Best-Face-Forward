@@ -3,12 +3,15 @@ using UnityEngine.EventSystems;
 using TMPro;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class DraggableWord : DraggableItem
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private int response_idx;
     protected override void Start()
     {
+        response_idx = -1;
         base.Start();
         //Setup word object
         GetComponentInChildren<TextMeshProUGUI>().text = my_part.GetID();
@@ -19,30 +22,35 @@ public class DraggableWord : DraggableItem
     {
         base.Update();
         //This draggable object was released
+        if(dragging){
+            transform.position = Mouse.current.position.value;
+        } 
         if(Mouse.current.leftButton.wasReleasedThisFrame){
             List<RaycastResult> mouse_check = IsOverUI();
+            if(!UnderMouse(mouse_check)){
+                return;
+            }
             Transform new_parent = GetDropParent(mouse_check);
-            if(new_parent != null){
+            if(new_parent == null){
+                transform.parent = transform.parent;
+            } else{
                 //This draggable object is over home or a correct drop type
-                if(new_parent.CompareTag("bank")){
+                /*if(new_parent.CompareTag("bank")){
                     //Remove the word from the manager
                     print("Removing the word and returning to the word bank.");
                 } else {
                     //We know it matches the word so we're adding a word to the response
                     print("Adding a word to the response.");
                 }
-                print(new_parent.name);
+                print(new_parent.name);*/
                 transform.parent = new_parent;
+                print(ResponseManager.rM.GetResponse());
             }
-        }
-        if(dragging){
-            print("Dragging");
-            transform.position = Mouse.current.position.value;
-        }
-        if(transform.position != transform.parent.position) {
-            //Eventually run a coroutine / timer that linearly interpolates to goal.
-            transform.position = transform.parent.position;
-        }       
+            /*if(transform.position != transform.parent.position) {
+                //Eventually run a coroutine / timer that linearly interpolates to goal.
+                transform.parent = transform.parent;
+            }*/
+        } 
     }
     public Transform GetDropParent(List<RaycastResult> ui_under_mouse){
         //Checks if the mouse is over a place where this item can be dropped

@@ -5,6 +5,7 @@ public class Part : ScriptableObject
 {
     [SerializeField] private string ID;
     [SerializeField] private Sprite partImage;
+    [SerializeField] private string word;
     public FeatureType type;
     public string GetID(){
         return ID;
@@ -14,6 +15,9 @@ public class Part : ScriptableObject
     }
     public FeatureType GetPartType(){
         return type;
+    }
+    public string GetWord(){
+        return word;
     }
 }
 public enum FeatureType

@@ -18,30 +18,40 @@ public class DraggableImage : DraggableItem
     protected override void Update()
     {
         base.Update();
+        if(dragging){
+            transform.position = Mouse.current.position.value;
+        }
         //This draggable object was released
         if(Mouse.current.leftButton.wasReleasedThisFrame){
             List<RaycastResult> mouse_check = IsOverUI();
+            if(!UnderMouse(mouse_check)){
+                return;
+            }
             Transform new_parent = GetDropParent(mouse_check);
             if(new_parent != null){
+                bool can_add = false;
                 //This draggable object is over home or a correct drop type
                 if(new_parent.CompareTag("home")){
-                    //Remove the part from the manager
-                    print("Removing the image from the face and placing it home");
+                    if(new_parent.gameObject.GetComponentInChildren<DraggableItem>()==null){
+                        //Remove the part from the manager
+                        print("Removing the image from the face and placing it home");
+                        ResponseManager.rM.RemoveItem(my_part);
+                        can_add = true;
+                    }
                 } else {
                     //We know it matches the part so we're adding a part to the response
                     print("Adding a facial feature to the response.");
+                    can_add = ResponseManager.rM.AddItem(my_part);
                 }
-                transform.parent = new_parent;
+                //If there is no conflicting thing in the slot
+                if(can_add){
+                    transform.parent = new_parent;
+                    transform.position = transform.parent.position;
+                }
+            } else {
+                transform.position = transform.parent.position;
             }
         }
-        if(dragging){
-            print("Dragging");
-            transform.position = Mouse.current.position.value;
-        }
-        if(transform.position != transform.parent.position) {
-            //Eventually run a coroutine / timer that linearly interpolates to goal.
-            transform.position = transform.parent.position;
-        }  
     }
     public Transform GetDropParent(List<RaycastResult> ui_under_mouse){
         //Checks if the mouse is over a place where this item can be dropped

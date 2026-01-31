@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class ResponseManager : MonoBehaviour
     public static ResponseManager rM;
     [SerializeField] private Part[] face_parts;
     [SerializeField] private List<string> prompt_response;
+    [SerializeField] private GameObject response_parent;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,16 +23,11 @@ public class ResponseManager : MonoBehaviour
         
     }
     public bool AddItem(Part new_part){
-        if(new_part.GetPartType() == FeatureType.word){
-            int resp_idx = AddWord(new_part.GetID());
+        if(face_parts[(int)new_part.GetPartType()] == null){
+            face_parts[(int)new_part.GetPartType()] = new_part;
             return true;
-        } else{
-            if(face_parts[(int)new_part.GetPartType()] == null){
-                face_parts[(int)new_part.GetPartType()] = new_part;
-                return true;
-            }
-            return false;
         }
+        return false;
     }
     public void RemoveItem(Part old_part){
         if(old_part.GetPartType() != FeatureType.word){
@@ -41,14 +38,14 @@ public class ResponseManager : MonoBehaviour
             //prompt_response.Remove()
         }
     }
-    public int AddWord(string s){
+    /*public int AddWord(string s){
         int insert_idx = prompt_response.Count;
         prompt_response.Add(s);
         return insert_idx;
     }
     public void RemoveWord(int idx){
         prompt_response.RemoveAt(idx);
-    }
+    }*/
     public string[] GetPartsResponse(){
         string[] ans = new string[face_parts.Length];
         for(int i = 0; i < ans.Length; i++){
@@ -56,13 +53,20 @@ public class ResponseManager : MonoBehaviour
         }
         return ans;
     }
-    public string GetResponse(){
+    /*public string GetResponse(){
         string ans = "";
         for(int i = 0; i < prompt_response.Count; i++){
             ans += prompt_response[i];
             ans += " ";
         }
         //Maybe add period but maybe it's not the emphasis you want
+        return ans;
+    }*/
+    public string GetResponse(){
+        string ans = "";
+        for(int i = 0; i < response_parent.transform.childCount; i++){
+            ans += response_parent.transform.GetChild(i).GetComponent<DraggableWord>().GetPart().GetID();
+        }
         return ans;
     }
     public List<string> GetResponseList(){

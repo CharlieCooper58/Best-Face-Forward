@@ -53,4 +53,7 @@ public class DraggableItem : MonoBehaviour
         }
         return false;
     }
+    public Part GetPart(){
+        return my_part;
+    }
 }

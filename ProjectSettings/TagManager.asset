@@ -5,9 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - home
-  - eyes
-  - nose
-  - mouth
+  - bank
   layers:
   - Default
   - TransparentFX

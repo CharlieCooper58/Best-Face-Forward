@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2273687012619864113, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
       propertyPath: m_Name
-      value: DraggableObject
+      value: ImageDraggable
       objectReference: {fileID: 0}
     - target: {fileID: 7859071823512218801, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
       propertyPath: m_Pivot.x
@@ -92,8 +92,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8364849071805065384, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4228434353643816178, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 452561521477432937}
   m_SourcePrefab: {fileID: 100100000, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
+--- !u!1 &7725907487962935096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4228434353643816178, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
+  m_PrefabInstance: {fileID: 5879877337347009482}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &452561521477432937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7725907487962935096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc81a8f4724c4d608c6ef1903731f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DraggableImage
+  my_part: {fileID: 0}

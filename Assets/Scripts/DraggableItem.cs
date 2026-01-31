@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class DraggableItem : MonoBehaviour
 {
+    public UnityEvent placedOnFace;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -41,17 +43,6 @@ public class DraggableItem : MonoBehaviour
                 transform.position = transform.parent.position;
             }
         }
-        /*if(EventSystem.current.currentSelectedGameObject == this.gameObject){
-            if(Input.GetKey(KeyCode.Mouse0)){
-                //Go to the mouse if mouse clicked on this object
-                transform.position = Input.mousePosition;
-            } else {
-                //If it detects a collidable object
-                //if()
-                //Place on the face and remove from the inventory
-                //Otherwise, return it to the original position
-            }
-        }*/
     }
     public List<RaycastResult> IsOverUI(string tag){
         PointerEventData pointerEventData = new PointerEventData(EventSystem.current);

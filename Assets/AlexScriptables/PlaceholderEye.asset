@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ff67857b646bbc4f997ddb72e64bdf7, type: 3}
-  m_Name: PlaceholderNose
+  m_Name: PlaceholderEye
   m_EditorClassIdentifier: Assembly-CSharp::Part
-  ID: 1234567
-  partImage: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  type: 1
+  ID: 12345
+  partImage: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  type: 0

@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - draggable
-  - merge
   - home
+  - eyes
+  - nose
+  - mouth
   layers:
   - Default
   - TransparentFX

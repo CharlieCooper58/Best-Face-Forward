@@ -13,7 +13,6 @@ public class ResponseManager : MonoBehaviour
         rM = this;
         prompt_response = new List<string>();
         face_parts = new Part[3]; //Eye, nose, mouth
-        print(face_parts[0]);
     }
 
     // Update is called once per frame
@@ -22,19 +21,25 @@ public class ResponseManager : MonoBehaviour
         
     }
     public bool AddItem(Part new_part){
-        /*for(int i = 0; i < face_parts.Length; i++){
-            if(face_parts[i].GetPartType() == new_part.GetPartType()){
-                return false;
-            }
-        }*/
-        if(face_parts[(int)new_part.GetPartType()] == null){
-            face_parts[(int)new_part.GetPartType()] = new_part;
+        if(new_part.GetPartType() == FeatureType.word){
+            int resp_idx = AddWord(new_part.GetID());
             return true;
+        } else{
+            if(face_parts[(int)new_part.GetPartType()] == null){
+                face_parts[(int)new_part.GetPartType()] = new_part;
+                return true;
+            }
+            return false;
         }
-        return false;
     }
     public void RemoveItem(Part old_part){
-        face_parts[(int)old_part.GetPartType()] = null;
+        if(old_part.GetPartType() != FeatureType.word){
+            face_parts[(int)old_part.GetPartType()] = null;
+        } else {
+            print("Haven't implemented removing words yet.");
+            //RemoveWord();
+            //prompt_response.Remove()
+        }
     }
     public int AddWord(string s){
         int insert_idx = prompt_response.Count;

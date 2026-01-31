@@ -16,11 +16,25 @@ public class DraggableItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(IsOverUI("draggable") != null && Mouse.current.leftButton.isPressed){
-            print(IsOverUI("draggable")[0].gameObject.name);
+        List<RaycastResult> results_drag = IsOverUI("draggable");
+        List<RaycastResult> results_merge = IsOverUI("merge"); //Fix this to only be one later
+        List<GameObject> draggableGameObjects = new List<GameObject>();
+        List<GameObject> mergeGameObjects = new List<GameObject>();
+        if(results_drag != null){
+            for(int i = 0; i < results_drag.Count; i++){
+                draggableGameObjects.Add(results_drag[i].gameObject);
+            }
+        }
+        if(results_merge != null){
+            for(int i = 0; i < results_merge.Count; i++){
+                mergeGameObjects.Add(results_merge[i].gameObject);
+            }
+        }
+        if(results_drag != null && draggableGameObjects.Contains(this.gameObject) && Mouse.current.leftButton.isPressed){
+            //print(IsOverUI("draggable")[0].gameObject.name);
             transform.position = Mouse.current.position.value;
         } else {
-            if(IsOverUI("merge") != null){
+            if(results_merge != null && draggableGameObjects.Contains(this.gameObject) && Mouse.current.leftButton.wasReleasedThisFrame){
                 transform.parent = IsOverUI("merge")[0].gameObject.transform;
             }
             if(transform.position != transform.parent.position){

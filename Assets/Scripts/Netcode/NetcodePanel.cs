@@ -3,17 +3,17 @@ using UnityEngine.UI;
 
 public class NetcodePanel : MonoBehaviour
 {
-    [SerializeField] Button hostGameButton;
+    [SerializeField] Button playButton;
 
-    [SerializeField] GameObject createLobbyPanel;
+    [SerializeField] GameObject lobbiesPanel;
 
     private void Start()
     {
-        hostGameButton.onClick.AddListener(() => OpenCreateLobbyPanel());
+        playButton.onClick.AddListener(() => OpenLobbiesPanel());
     }
 
-    private void OpenCreateLobbyPanel()
+    private void OpenLobbiesPanel()
     {
-        createLobbyPanel.SetActive(true);
+        lobbiesPanel.SetActive(true);
     }
 }

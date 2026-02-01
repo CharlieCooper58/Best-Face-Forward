@@ -1,0 +1,728 @@
+fileFormatVersion: 2
+guid: dab5e0bc3aad44d918a31136cf878622
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7497990723979567588
+    second: Eyes-Uncanny-1_0
+  - first:
+      213: -2906806889186094268
+    second: Eyes-Uncanny-1_1
+  - first:
+      213: -5198383900240785152
+    second: Eyes-Uncanny-1_2
+  - first:
+      213: -2285579368642809777
+    second: Eyes-Uncanny-1_3
+  - first:
+      213: 5592674257218050427
+    second: Eyes-Uncanny-1_4
+  - first:
+      213: 6089757611789383835
+    second: Eyes-Uncanny-1_5
+  - first:
+      213: 4409297884059288945
+    second: Eyes-Uncanny-1_6
+  - first:
+      213: 1063237369169495422
+    second: Eyes-Uncanny-1_7
+  - first:
+      213: -4128519054563932806
+    second: Eyes-Uncanny-1_8
+  - first:
+      213: 5418306639984129913
+    second: Eyes-Uncanny-1_9
+  - first:
+      213: -5922910616058486158
+    second: Eyes-Uncanny-1_10
+  - first:
+      213: -2853023087768402282
+    second: Eyes-Uncanny-1_11
+  - first:
+      213: -4919418201178044691
+    second: Eyes-Uncanny-1_12
+  - first:
+      213: -3019484221611216476
+    second: Eyes-Uncanny-1_13
+  - first:
+      213: -6680206966877502255
+    second: Eyes-Uncanny-1_14
+  - first:
+      213: -2284339049535690710
+    second: Eyes-Uncanny-1_15
+  - first:
+      213: 3325944871010225560
+    second: Eyes-Uncanny-1_16
+  - first:
+      213: -4567889366755950714
+    second: Eyes-Uncanny-1_17
+  - first:
+      213: 567056355531313178
+    second: Eyes-Uncanny-1_18
+  - first:
+      213: -8898218205270636878
+    second: Eyes-Uncanny-1_19
+  - first:
+      213: -9109932198261509710
+    second: Eyes-Uncanny-1_20
+  - first:
+      213: -8273723074474492677
+    second: Eyes-Uncanny-1_21
+  - first:
+      213: 2115045218348139218
+    second: Eyes-Uncanny-1_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 699
+        width: 163
+        height: 666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1e1600a929c1f790800000000000000
+      internalID: -7497990723979567588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_1
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 1338
+        width: 320
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44397630982f8a7d0800000000000000
+      internalID: -2906806889186094268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_2
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 1322
+        width: 377
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 001d90c8261abd7b0800000000000000
+      internalID: -5198383900240785152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_3
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1317
+        width: 418
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f40751a7cadf740e0800000000000000
+      internalID: -2285579368642809777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_4
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 1338
+        width: 569
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7914fd0b9b2d9d40800000000000000
+      internalID: 5592674257218050427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_5
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 903
+        width: 17
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b98ffe2784a238450800000000000000
+      internalID: 6089757611789383835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_6
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1074
+        width: 805
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1754c386019f03d30800000000000000
+      internalID: 4409297884059288945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_7
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 1080
+        width: 831
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e75c44501c061ce00800000000000000
+      internalID: 1063237369169495422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_8
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 485
+        width: 741
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7509403bcd84b6c0800000000000000
+      internalID: -4128519054563932806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_9
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 819
+        width: 158
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 977f4608e21b13b40800000000000000
+      internalID: 5418306639984129913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_10
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 678
+        width: 29
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 272a175fc289dcda0800000000000000
+      internalID: -5922910616058486158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_11
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 485
+        width: 742
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 696839d1e960868d0800000000000000
+      internalID: -2853023087768402282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_12
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 818
+        width: 74
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de60131d537babbb0800000000000000
+      internalID: -4919418201178044691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_13
+      rect:
+        serializedVersion: 2
+        x: 2095
+        y: 390
+        width: 32
+        height: 461
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a177fd2913a816d0800000000000000
+      internalID: -3019484221611216476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_14
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 665
+        width: 24
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d44d2928232b43a0800000000000000
+      internalID: -6680206966877502255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_15
+      rect:
+        serializedVersion: 2
+        x: 2038
+        y: 699
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a282fd5ccb56c40e0800000000000000
+      internalID: -2284339049535690710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_16
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 505
+        width: 18
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89dc8131d31282e20800000000000000
+      internalID: 3325944871010225560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_17
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 482
+        width: 206
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68f3a3992d89b90c0800000000000000
+      internalID: -4567889366755950714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_18
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 272
+        width: 18
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a10521f30c69ed700800000000000000
+      internalID: 567056355531313178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_19
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 342
+        width: 549
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b60ee4efad238480800000000000000
+      internalID: -8898218205270636878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_20
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 345
+        width: 951
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1bab2aee4039180800000000000000
+      internalID: -9109932198261509710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_21
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 340
+        width: 364
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfcbef723b4dd2d80800000000000000
+      internalID: -8273723074474492677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Uncanny-1_22
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 272
+        width: 14
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d2878b8b662a5d10800000000000000
+      internalID: 2115045218348139218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Eyes-Uncanny-1_0: -7497990723979567588
+      Eyes-Uncanny-1_1: -2906806889186094268
+      Eyes-Uncanny-1_10: -5922910616058486158
+      Eyes-Uncanny-1_11: -2853023087768402282
+      Eyes-Uncanny-1_12: -4919418201178044691
+      Eyes-Uncanny-1_13: -3019484221611216476
+      Eyes-Uncanny-1_14: -6680206966877502255
+      Eyes-Uncanny-1_15: -2284339049535690710
+      Eyes-Uncanny-1_16: 3325944871010225560
+      Eyes-Uncanny-1_17: -4567889366755950714
+      Eyes-Uncanny-1_18: 567056355531313178
+      Eyes-Uncanny-1_19: -8898218205270636878
+      Eyes-Uncanny-1_2: -5198383900240785152
+      Eyes-Uncanny-1_20: -9109932198261509710
+      Eyes-Uncanny-1_21: -8273723074474492677
+      Eyes-Uncanny-1_22: 2115045218348139218
+      Eyes-Uncanny-1_3: -2285579368642809777
+      Eyes-Uncanny-1_4: 5592674257218050427
+      Eyes-Uncanny-1_5: 6089757611789383835
+      Eyes-Uncanny-1_6: 4409297884059288945
+      Eyes-Uncanny-1_7: 1063237369169495422
+      Eyes-Uncanny-1_8: -4128519054563932806
+      Eyes-Uncanny-1_9: 5418306639984129913
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

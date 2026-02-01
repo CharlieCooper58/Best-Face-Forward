@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: 79f360d255e02471780ba2242cc471d9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8068309952004372799
+    second: Eyes-Monster-4_0
+  - first:
+      213: -200018598848400599
+    second: Eyes-Monster-4_1
+  - first:
+      213: 3964435449469279324
+    second: Eyes-Monster-4_2
+  - first:
+      213: 687570845554843209
+    second: Eyes-Monster-4_3
+  - first:
+      213: -3527029266105843566
+    second: Eyes-Monster-4_4
+  - first:
+      213: 7390272934812821794
+    second: Eyes-Monster-4_5
+  - first:
+      213: -1156662087442403598
+    second: Eyes-Monster-4_6
+  - first:
+      213: -4061439830177117859
+    second: Eyes-Monster-4_7
+  - first:
+      213: 8609838165661732281
+    second: Eyes-Monster-4_8
+  - first:
+      213: 4927581814924601650
+    second: Eyes-Monster-4_9
+  - first:
+      213: -2663221780121978917
+    second: Eyes-Monster-4_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Eyes-Monster-4_0
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 568
+        width: 394
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3938f2572568ff60800000000000000
+      internalID: 8068309952004372799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Monster-4_1
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 568
+        width: 395
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9237b23e424693df0800000000000000
+      internalID: -200018598848400599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Monster-4_2
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 499
+        width: 271
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5c159c6901840730800000000000000
+      internalID: 3964435449469279324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Monster-4_3
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 388
+        width: 289
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94e16378a0eba8900800000000000000
+      internalID: 687570845554843209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Monster-4_4
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 391
+        width: 302
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290ca59c1997d0fc0800000000000000
+      internalID: -3527029266105843566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Monster-4_5
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 502
+        width: 270
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 229a3b034168f8660800000000000000
+      internalID: 7390272934812821794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Monster-4_6
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 409
+        width: 14
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fe65d0b5f5b2ffe0800000000000000
+      internalID: -1156662087442403598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Monster-4_7
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 409
+        width: 19
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d598bad2efdd2a7c0800000000000000
+      internalID: -4061439830177117859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Monster-4_8
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 388
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bd4eddd13a4c7770800000000000000
+      internalID: 8609838165661732281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Monster-4_9
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 388
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2396140ad89426440800000000000000
+      internalID: 4927581814924601650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Monster-4_10
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 373
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd7febdb6e55a0bd0800000000000000
+      internalID: -2663221780121978917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Eyes-Monster-4_0: 8068309952004372799
+      Eyes-Monster-4_1: -200018598848400599
+      Eyes-Monster-4_10: -2663221780121978917
+      Eyes-Monster-4_2: 3964435449469279324
+      Eyes-Monster-4_3: 687570845554843209
+      Eyes-Monster-4_4: -3527029266105843566
+      Eyes-Monster-4_5: 7390272934812821794
+      Eyes-Monster-4_6: -1156662087442403598
+      Eyes-Monster-4_7: -4061439830177117859
+      Eyes-Monster-4_8: 8609838165661732281
+      Eyes-Monster-4_9: 4927581814924601650
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

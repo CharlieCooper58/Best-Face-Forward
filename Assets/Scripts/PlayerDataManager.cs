@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Netcode;
 using Unity.Services.Multiplayer;
 using UnityEngine;
@@ -26,16 +27,35 @@ public class PlayerDataManager : NetworkBehaviour
         }
         
     }
-    
+    public string SerializeAllResponses()
+    {
+        return string.Join("||",
+            playerDataDict.Select(kvp =>
+                $"{kvp.Key}|{kvp.Value.eye}|{kvp.Value.nose}|{kvp.Value.mouth}|{kvp.Value.response}"
+            )
+        );
+    }
+    public void DeserializeVotingData(string data)
+    {
+        foreach (var entry in data.Split("||"))
+        {
+            var parts = entry.Split('|');
+            var id = parts[0];
+            if(!playerDataDict.TryGetValue(id, out var playerData))
+            {
+                playerDataDict[id] = new PlayerData(id, "Unknown");
+            }
+            playerDataDict[id].SetResponses(
+                new[] { parts[1], parts[2], parts[3] },
+                parts[4]
+            );
+        }
+    }
     public void RegisterPlayerResponses(string ID, string[] parts, string response)
     {
-        RegisterPlayerResponseClientRPC(ID, parts[0], parts[1], parts[2], response);
+        playerDataDict[ID].SetResponses(parts, response);
     }
-    [Rpc(SendTo.ClientsAndHost)]
-    public void RegisterPlayerResponseClientRPC(string ID, string eye, string nose, string mouth, string response)
-    {
-        playerDataDict[ID].SetResponses(new string[] {eye, nose, mouth}, response);
-    }
+    
     public string[] GetResponse(string ID)
     {
         return playerDataDict[ID].GetResponse();

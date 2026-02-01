@@ -47,11 +47,12 @@ public class VotingCanvas : NetworkBehaviour
     public void StartVotingRound()
     {
         votingComplete.Value = false;
-        StartVotingRoundClientRPC();
+        StartVotingRoundClientRPC(PlayerDataManager.instance.SerializeAllResponses());
     }
     [Rpc(SendTo.ClientsAndHost)]
-    public void StartVotingRoundClientRPC()
+    public void StartVotingRoundClientRPC(string serializedData)
     {
+        PlayerDataManager.instance.DeserializeVotingData(serializedData);
         content.SetActive(true);
         currentVote = "";
         var players = RoundManager.session.Players;
@@ -98,16 +99,8 @@ public class VotingCanvas : NetworkBehaviour
         resultsReceived = 0;
         expectedVotes = SessionManager.instance.ActiveSession.PlayerCount;
         FinalizeVotingClientRPC();
-        StartCoroutine(CompleteVotingAfterWait());
     }
-    IEnumerator CompleteVotingAfterWait()
-    {
-        yield return new WaitForSeconds(10);
-        if(resultsReceived < expectedVotes)
-        {
-            CompleteVoting();
-        }
-    }
+
     [Rpc(SendTo.ClientsAndHost)]
     public void FinalizeVotingClientRPC()
     {
@@ -122,18 +115,10 @@ public class VotingCanvas : NetworkBehaviour
             votes.Add(vote);
             Debug.Log(votes);
         }
-        resultsReceived++;
-        TryCompleteVoting();
+        RoundManager.instance.RegisterResponse();
     }
 
-    public void TryCompleteVoting()
-    {
-        if(resultsReceived == expectedVotes)
-        {
-            CompleteVoting();
-        }
-    }
-    void CompleteVoting()
+    public void CompleteVoting()
     {
         Debug.Log("Voting complete!");
         votingComplete.Value = true;

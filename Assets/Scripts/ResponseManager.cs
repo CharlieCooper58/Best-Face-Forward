@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using TMPro;
@@ -52,15 +53,23 @@ public class ResponseManager : NetworkBehaviour
     [Rpc(SendTo.ClientsAndHost)]
     private void TimesUpClientRPC()
     {
-        SubmitResultsServerRPC();
-        contents.SetActive(false);
-    }
-    [Rpc(SendTo.Server)]
-    public void SubmitResultsServerRPC()
-    {
         var partsResults = GetPartsResponse();
         var promptResults = GetResponse();
-        PlayerDataManager.instance.RegisterPlayerResponses(AuthenticationService.Instance.PlayerId, partsResults, promptResults);
+        StartCoroutine(HideContentsAfterDelay());
+        SubmitResultsServerRPC(AuthenticationService.Instance.PlayerId, partsResults[0], partsResults[1], partsResults[2], promptResults);
+        RoundManager.instance.ShowLoadingScreen();
+    }
+    IEnumerator HideContentsAfterDelay()
+    {
+        yield return new WaitForSeconds(1);
+        contents.SetActive(false);
+
+    }
+    [Rpc(SendTo.Server)]
+    public void SubmitResultsServerRPC(string ID, string eyes, string nose, string mouth, string response)
+    {
+        PlayerDataManager.instance.RegisterPlayerResponses(ID, new[] {eyes, nose, mouth}, response);
+        RoundManager.instance.RegisterResponse();
     }
     private void ChooseTheme()
     {

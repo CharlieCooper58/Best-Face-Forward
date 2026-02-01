@@ -170,7 +170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00092588743}
+  m_AnchoredPosition: {x: 0, y: 0.0010165585}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2586880534632793515
@@ -1955,8 +1955,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   leaveLobbyButton: {fileID: 3091723690434303515}
-  startGameButton: {fileID: 0}
-  gameSceneName: 
+  startGameButton: {fileID: 7934847894173582872}
+  gameSceneName: GameScene
   lobbyNameText: {fileID: 5565116580731729856}
 --- !u!1 &5661053301585371448
 GameObject:

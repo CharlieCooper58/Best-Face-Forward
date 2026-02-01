@@ -19,6 +19,12 @@ public class Part : ScriptableObject
     public string GetWord(){
         return word;
     }
+    public void SetType(FeatureType my_type){
+        type = my_type;
+    }
+    public void SetWord(string my_word){
+        word = my_word;
+    }
 }
 public enum FeatureType
     {

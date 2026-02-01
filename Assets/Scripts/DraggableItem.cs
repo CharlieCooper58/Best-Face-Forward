@@ -56,4 +56,7 @@ public class DraggableItem : MonoBehaviour
     public Part GetPart(){
         return my_part;
     }
+    public void SetPart(Part part){
+        my_part = part;
+    }
 }

@@ -12,6 +12,9 @@ public class DraggableImage : DraggableItem
     {
         base.Start();
         //Setup objects
+        Setup();
+    }
+    public void Setup(){
         image = GetComponent<Image>();
         image.sprite = my_part.GetImage();
     }

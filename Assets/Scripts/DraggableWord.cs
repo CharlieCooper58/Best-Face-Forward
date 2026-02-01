@@ -14,6 +14,9 @@ public class DraggableWord : DraggableItem
         response_idx = -1;
         base.Start();
         //Setup word object
+        Setup();
+    }
+    public void Setup(){
         GetComponentInChildren<TextMeshProUGUI>().text = my_part.GetID();
     }
 

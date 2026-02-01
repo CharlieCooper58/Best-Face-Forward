@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: c84013b4640064299957f6f2412ca6af
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1866788439530989202
+    second: Eyes-Normal-2_0
+  - first:
+      213: -330759893100211106
+    second: Eyes-Normal-2_1
+  - first:
+      213: 7363635284094897893
+    second: Eyes-Normal-2_2
+  - first:
+      213: 4419484907821752071
+    second: Eyes-Normal-2_3
+  - first:
+      213: -8056590971076652010
+    second: Eyes-Normal-2_4
+  - first:
+      213: -2805693102342534867
+    second: Eyes-Normal-2_5
+  - first:
+      213: -4481453528086472518
+    second: Eyes-Normal-2_6
+  - first:
+      213: -588087727912212115
+    second: Eyes-Normal-2_7
+  - first:
+      213: 1190515553498397277
+    second: Eyes-Normal-2_8
+  - first:
+      213: -3287230442875491829
+    second: Eyes-Normal-2_9
+  - first:
+      213: -3652863316269059606
+    second: Eyes-Normal-2_10
+  - first:
+      213: 6674169608518261097
+    second: Eyes-Normal-2_11
+  - first:
+      213: 5025584190324388033
+    second: Eyes-Normal-2_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Eyes-Normal-2_0
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 574
+        width: 395
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6913fe0ec5d716e0800000000000000
+      internalID: -1866788439530989202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Normal-2_1
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 580
+        width: 27
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e54d0d131a7e86bf0800000000000000
+      internalID: -330759893100211106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Normal-2_2
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 570
+        width: 31
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ee4204d643e03660800000000000000
+      internalID: 7363635284094897893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Normal-2_3
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 603
+        width: 389
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f5ae4bb1a255d30800000000000000
+      internalID: 4419484907821752071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Normal-2_4
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 415
+        width: 301
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6145b5c823d313090800000000000000
+      internalID: -8056590971076652010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Normal-2_5
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 403
+        width: 21
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d290c161dfc2019d0800000000000000
+      internalID: -2805693102342534867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Normal-2_6
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 404
+        width: 304
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab81cfc82cdaec1c0800000000000000
+      internalID: -4481453528086472518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Normal-2_7
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 489
+        width: 276
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d69a609c351b6d7f0800000000000000
+      internalID: -588087727912212115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Normal-2_8
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 445
+        width: 263
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5a79d9969f858010800000000000000
+      internalID: 1190515553498397277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Normal-2_9
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 419
+        width: 22
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0a6e8524596162d0800000000000000
+      internalID: -3287230442875491829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Normal-2_10
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 361
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae13ab4ea2c6e4dc0800000000000000
+      internalID: -3652863316269059606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Normal-2_11
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 314
+        width: 107
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 969507ec5e96f9c50800000000000000
+      internalID: 6674169608518261097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyes-Normal-2_12
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 197
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c0ba15c1367eb540800000000000000
+      internalID: 5025584190324388033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Eyes-Normal-2_0: -1866788439530989202
+      Eyes-Normal-2_1: -330759893100211106
+      Eyes-Normal-2_10: -3652863316269059606
+      Eyes-Normal-2_11: 6674169608518261097
+      Eyes-Normal-2_12: 5025584190324388033
+      Eyes-Normal-2_2: 7363635284094897893
+      Eyes-Normal-2_3: 4419484907821752071
+      Eyes-Normal-2_4: -8056590971076652010
+      Eyes-Normal-2_5: -2805693102342534867
+      Eyes-Normal-2_6: -4481453528086472518
+      Eyes-Normal-2_7: -588087727912212115
+      Eyes-Normal-2_8: 1190515553498397277
+      Eyes-Normal-2_9: -3287230442875491829
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

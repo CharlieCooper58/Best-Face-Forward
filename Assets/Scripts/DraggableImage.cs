@@ -41,6 +41,7 @@ public class DraggableImage : DraggableItem
                         //Remove the part from the manager
                         print("Removing the image from the face and placing it home");
                         ResponseManager.instance.RemoveItem(my_part);
+                        GetComponentInChildren<Animator>().SetTrigger("scale_down");
                         can_add = true;
                     }
                 } else {
@@ -52,6 +53,7 @@ public class DraggableImage : DraggableItem
                 if(can_add){
                     transform.parent = new_parent;
                     transform.position = transform.parent.position;
+                    GetComponentInChildren<Animator>().SetTrigger("scale_up");
                 }
             } else {
                 transform.position = transform.parent.position;

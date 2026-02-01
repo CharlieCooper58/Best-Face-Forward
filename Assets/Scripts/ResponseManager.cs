@@ -25,7 +25,7 @@ public class ResponseManager : NetworkBehaviour
 
     bool roundIsActive;
 
-    float timer;
+    private float timer;
     public void StartFacebuildingRound()
     {
         //RandomizeFaceParts();
@@ -123,5 +123,8 @@ public class ResponseManager : NetworkBehaviour
     }
     public List<string> GetResponseList(){
         return prompt_response;
+    }
+    public float GetTimer(){
+        return timer;
     }
 }

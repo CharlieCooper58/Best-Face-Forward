@@ -1,9 +1,11 @@
+using Unity.Services.Multiplayer;
 using Unity.VisualScripting;
 using UnityEditor.Search;
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+    public static InventoryManager instance;
     [SerializeField] int num_each_item;
     [SerializeField] int num_words;
     [SerializeField] private Part[] eye_scriptables;
@@ -26,12 +28,14 @@ public class InventoryManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        instance = this;
         for(int i = 0; i < num_each_item; i++){
             Instantiate(img_part_prefab, eye_parent_t);
             Instantiate(img_part_prefab, nose_parent_t);
             Instantiate(img_part_prefab, mouth_parent_t);
             Instantiate(word_part_prefab, word_parent_t);
         }
+        DealNewHand();
     }
 
     // Update is called once per frame
@@ -92,5 +96,21 @@ public class InventoryManager : MonoBehaviour
             word_parent_t.GetChild(i).GetComponentInChildren<DraggableImage>().SetPart(mouth_player_scriptables[i]);
             word_parent_t.GetChild(i).GetComponentInChildren<DraggableImage>().Setup();
         }
+    }
+
+    public void ShowEyes(){
+        eye_parent_t.gameObject.SetActive(true);
+        nose_parent_t.gameObject.SetActive(false);
+        mouth_parent_t.gameObject.SetActive(false);
+    }
+    public void ShowNoses(){
+        eye_parent_t.gameObject.SetActive(false);
+        nose_parent_t.gameObject.SetActive(true);
+        mouth_parent_t.gameObject.SetActive(false);
+    }
+    public void ShowMouths(){
+        eye_parent_t.gameObject.SetActive(false);
+        nose_parent_t.gameObject.SetActive(false);
+        mouth_parent_t.gameObject.SetActive(true);
     }
 }

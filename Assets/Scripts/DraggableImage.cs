@@ -6,12 +6,14 @@ using System.Collections.Generic;
 
 public class DraggableImage : DraggableItem
 {
+    Image image;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected override void Start()
     {
         base.Start();
         //Setup objects
-        GetComponent<Image>().sprite = my_part.GetImage();
+        image = GetComponent<Image>();
+        image.sprite = my_part.GetImage();
     }
 
     // Update is called once per frame

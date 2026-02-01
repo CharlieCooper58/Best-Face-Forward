@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using TMPro;
+using Unity.Netcode;
 using Unity.Services.Authentication;
 using Unity.Services.Lobbies;
 using Unity.Services.Multiplayer;
@@ -13,12 +14,16 @@ public class LobbyWaitingRoom : MonoBehaviour
     LobbyFaceIcon[] faceIcons;
 
     [SerializeField] Button leaveLobbyButton;
+    [SerializeField] Button startGameButton;
+    [SerializeField] string gameSceneName;
 
     [SerializeField] TMP_Text lobbyNameText;
+
 
     private void Start()
     {
         leaveLobbyButton.onClick.AddListener(() => LeaveLobby());
+        startGameButton.onClick.AddListener(() => TryStartGame());
     }
     private void OnEnable()
     {
@@ -92,4 +97,12 @@ public class LobbyWaitingRoom : MonoBehaviour
         }
     }
 
+    public void TryStartGame()
+    {
+        if(!session.IsHost || session.PlayerCount < 2)
+        {
+            return;
+        }
+        NetworkManager.Singleton.SceneManager.LoadScene(gameSceneName, UnityEngine.SceneManagement.LoadSceneMode.Single);
+    }
 }

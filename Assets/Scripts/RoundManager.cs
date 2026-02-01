@@ -51,6 +51,7 @@ public class RoundManager : NetworkBehaviour
                 {
                     currentRound = RoundName.facebuilding;
                     Debug.Log("All players connected!");
+                    StartRoundOneClientRPC();
                 }
                 break;
             case RoundName.facebuilding:
@@ -60,9 +61,9 @@ public class RoundManager : NetworkBehaviour
     }
 
     [Rpc(SendTo.Everyone)]
-    public void HideLoadingCanvasClientRPC()
+    public void StartRoundOneClientRPC()
     {
         LoadingCanvas.SetActive(false);
-
+        ResponseManager.rM.StartFacebuildingRound();
     }
 }

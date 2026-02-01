@@ -1,15 +1,40 @@
 using System.Collections.Generic;
 using System.ComponentModel;
+using TMPro;
+using Unity.Netcode;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class ResponseManager : MonoBehaviour
+public class ResponseManager : NetworkBehaviour
 {
     public static ResponseManager rM;
     [SerializeField] private Part[] face_parts;
     [SerializeField] private List<string> prompt_response;
     [SerializeField] private GameObject response_parent;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    [SerializeField] ThemeBank earlyThemes;
+    [SerializeField] ThemeBank round3Themes;
+
+    [SerializeField] TMP_Text themeText;
+    [SerializeField] TMP_Text promptText;
+    [SerializeField] GameObject contents;
+
+    string roundTheme;
+    string roundPrompt;
+
+    bool roundIsActive;
+
+    float timer;
+    public void StartFacebuildingRound()
+    {
+        //RandomizeFaceParts();
+        //RandomizeWordbanks();
+        ChooseTheme();
+        roundIsActive = true;
+        timer = RoundManager.facebuildingRoundTimer;
+        contents.SetActive(true);
+    }
     void Start()
     {
         rM = this;
@@ -20,7 +45,34 @@ public class ResponseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (IsServer && roundIsActive)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                TimesUpClientRPC();
+            }
+        }
+
+    }
+    [Rpc(SendTo.ClientsAndHost)]
+    private void TimesUpClientRPC()
+    {
+        SubmitResultsServerRPC();
+        contents.SetActive(false);
+    }
+
+    [Rpc(SendTo.Server)]
+    public void SubmitResultsServerRPC()
+    {
+        var partsResults = GetPartsResponse();
+        var promptResults = GetResponse();
+    }
+    private void ChooseTheme()
+    {
+        var rt = (RoundManager.instance.roundCount == 3 ? round3Themes.GetRandomTheme() : earlyThemes.GetRandomTheme());
+        roundTheme = rt.theme;
+        roundPrompt = rt.prompt;
     }
     public bool AddItem(Part new_part){
         if(face_parts[(int)new_part.GetPartType()] == null){

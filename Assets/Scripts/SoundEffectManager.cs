@@ -55,6 +55,10 @@ public class SoundEffectManager : MonoBehaviour
 
     public void StopMusic()
     {
+        if(currentAudioSource == null)
+        {
+            return;
+        }
         StartCoroutine(FadeOutMusic(currentAudioSource));
         currentAudioSource = null;
     }

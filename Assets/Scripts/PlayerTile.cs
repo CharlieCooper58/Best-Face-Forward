@@ -25,8 +25,13 @@ public class PlayerTile : MonoBehaviour
         EnableButton();
         playerID = ID;
         eyesImage.sprite = InventoryManager.instance.GetSpriteFromPartName(eyesHash);
+        eyesImage.enabled = (eyesImage.sprite != null);
         noseImage.sprite = InventoryManager.instance.GetSpriteFromPartName(noseHash);
+        noseImage.enabled = (noseImage.sprite != null);
+
         mouthImage.sprite = InventoryManager.instance.GetSpriteFromPartName(mouthHash);
+        mouthImage.enabled = (mouthImage.sprite != null);
+
         responseText.text = response;
     }
     public void ResetVotes()

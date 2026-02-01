@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff67857b646bbc4f997ddb72e64bdf7, type: 3}
   m_Name: PlaceholderNose 4
   m_EditorClassIdentifier: Assembly-CSharp::Part
-  ID: 22
+  ID: 23
   partImage: {fileID: 21300000, guid: b7df12ab5f51d4d1b97e0208d97f45d1, type: 3}
   word: 
   type: 1

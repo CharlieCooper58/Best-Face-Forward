@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using TMPro;
 using Unity.Netcode;
+using Unity.Services.Authentication;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -67,6 +68,7 @@ public class ResponseManager : NetworkBehaviour
     {
         var partsResults = GetPartsResponse();
         var promptResults = GetResponse();
+        PlayerDataManager.instance.RegisterPlayerResponses(AuthenticationService.Instance.PlayerId, partsResults, promptResults);
     }
     private void ChooseTheme()
     {

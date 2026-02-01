@@ -14,6 +14,8 @@ public class NetcodePanel : MonoBehaviour
 
     private void OpenLobbiesPanel()
     {
+        SoundEffectManager.instance.PlaySoundByName("UI_Confirm", 1.5f, .02f);
+
         lobbiesPanel.SetActive(true);
     }
 }

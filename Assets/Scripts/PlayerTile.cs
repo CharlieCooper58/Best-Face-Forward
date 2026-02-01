@@ -38,7 +38,7 @@ public class PlayerTile : MonoBehaviour
     }
     public void AddVote()
     {
-        SoundEffectManager.instance.PlaySoundByName("AddPoint");
+        SoundEffectManager.instance.PlaySoundByName("AddPoint", 0.85f);
         Instantiate(voteTally, voteTabulationArea);
     }
 

@@ -37,6 +37,8 @@ public class LobbyJoinPanel : MonoBehaviour
     }
     public async Task RefreshLobbies()
     {
+        SoundEffectManager.instance.PlaySoundByName("UI_Confirm", 1.5f, .02f);
+
         if (joinButtons != null)
         {
             for (int i = 0; i < joinButtons.Length; i++)

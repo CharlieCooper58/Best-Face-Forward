@@ -32,8 +32,8 @@ public class RoundManager : NetworkBehaviour
     RoundName currentRound;
 
     RoundName nextRound;
-    public const float facebuildingRoundTimer = 60;
-    public const float votingRoundTimer = 35;
+    public const float facebuildingRoundTimer = 30;
+    public const float votingRoundTimer = 20;
     public const float resultsRoundTimer = 15;
 
     public override void OnNetworkSpawn()
@@ -92,9 +92,7 @@ public class RoundManager : NetworkBehaviour
                     ResponseManager.instance.EndFaceBuildingRound();
                     currentRound = RoundName.waitForPlayers;
                     nextRound = RoundName.voting;
-                    playerResponses.Value = 0;
                     StartCoroutine(WaitforPlayerResponses());
-                    ShowLoadingScreenClientRPC();
                     //timer.Value = votingRoundTimer;
                     // To do: add animation showing time's up
                     // Add sound effect showing time's up
@@ -105,9 +103,8 @@ public class RoundManager : NetworkBehaviour
                 {
                     VotingCanvas.FinalizeVoting();
                     currentRound = RoundName.waitForPlayers;
-                    playerResponses.Value = 0;
+                    nextRound = RoundName.tabulating;
                     StartCoroutine(WaitforPlayerResponses());
-                    ShowLoadingScreenClientRPC();
                 }
                 break;
             case RoundName.tabulating:
@@ -148,6 +145,7 @@ public class RoundManager : NetworkBehaviour
 
     IEnumerator WaitforPlayerResponses()
     {
+        ShowLoadingScreenClientRPC();
         playerResponses.Value = 0;
         expectedResponses = session.PlayerCount;
         yield return new WaitForSeconds(10);

@@ -17,6 +17,7 @@ public class SoundEffectManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        soundEffectAudio = GetComponentInChildren<AudioSource>();
     }
     public void PlaySoundByName(string soundName, float volumeScale = 1)
     {

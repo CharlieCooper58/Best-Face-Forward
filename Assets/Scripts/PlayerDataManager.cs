@@ -35,10 +35,11 @@ public class PlayerDataManager : NetworkBehaviour
             )
         );
     }
-    public void DeserializeVotingData(string data)
+    public void DeserializePlayerResponse(string data)
     {
         foreach (var entry in data.Split("||"))
         {
+            Debug.Log(entry);
             var parts = entry.Split('|');
             var id = parts[0];
             if(!playerDataDict.TryGetValue(id, out var playerData))

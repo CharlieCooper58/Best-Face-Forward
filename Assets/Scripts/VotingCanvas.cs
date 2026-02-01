@@ -52,7 +52,7 @@ public class VotingCanvas : NetworkBehaviour
     [Rpc(SendTo.ClientsAndHost)]
     public void StartVotingRoundClientRPC(string serializedData)
     {
-        PlayerDataManager.instance.DeserializeVotingData(serializedData);
+        PlayerDataManager.instance.DeserializePlayerResponse(serializedData);
         content.SetActive(true);
         currentVote = "";
         var players = RoundManager.session.Players;
@@ -105,6 +105,10 @@ public class VotingCanvas : NetworkBehaviour
     public void FinalizeVotingClientRPC()
     {
         Debug.Log(currentVote);
+        foreach(var playerTile in tileChildren)
+        {
+            playerTile.DisableButton();
+        }
         SendVoteServerRPC(currentVote);
     }
     [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
@@ -138,13 +142,14 @@ public class VotingCanvas : NetworkBehaviour
     }
     IEnumerator DisplayVotes()
     {
+        yield return new WaitForSeconds(1);
         for (int i = 0; i < votes.Count; i++)
         {
             if(tilesDict.TryGetValue(votes[i], out var tile))
             {
                 tile.AddVote();
             }
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
         }
     }
 }

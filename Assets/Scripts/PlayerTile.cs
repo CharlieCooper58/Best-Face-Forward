@@ -22,6 +22,7 @@ public class PlayerTile : MonoBehaviour
     }
     public void SetDetails(string ID, string eyesHash, string noseHash, string mouthHash, string response)
     {
+        EnableButton();
         playerID = ID;
         eyesImage.sprite = InventoryManager.instance.GetSpriteFromPartName(eyesHash);
         noseImage.sprite = InventoryManager.instance.GetSpriteFromPartName(noseHash);
@@ -39,5 +40,14 @@ public class PlayerTile : MonoBehaviour
     {
         SoundEffectManager.instance.PlaySoundByName("AddPoint");
         Instantiate(voteTally, voteTabulationArea);
+    }
+
+    public void DisableButton()
+    {
+        voteButton.enabled = false;
+    }
+    public void EnableButton()
+    {
+        voteButton.enabled = true;
     }
 }

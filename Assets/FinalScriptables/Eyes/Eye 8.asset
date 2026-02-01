@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Eye 8
   m_EditorClassIdentifier: Assembly-CSharp::Part
   ID: 8
-  partImage: {fileID: -7497990723979567588, guid: dab5e0bc3aad44d918a31136cf878622, type: 3}
+  partImage: {fileID: 21300000, guid: dab5e0bc3aad44d918a31136cf878622, type: 3}
   word: 
   type: 0

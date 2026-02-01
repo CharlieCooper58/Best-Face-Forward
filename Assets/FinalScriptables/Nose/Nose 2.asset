@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Nose 2
   m_EditorClassIdentifier: Assembly-CSharp::Part
   ID: 20
-  partImage: {fileID: 1380632285086328913, guid: 5753f032e782a4a01afed079b9fa6d8c, type: 3}
+  partImage: {fileID: 21300000, guid: 5753f032e782a4a01afed079b9fa6d8c, type: 3}
   word: 
   type: 1

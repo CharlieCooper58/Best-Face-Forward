@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Mouth 3
   m_EditorClassIdentifier: Assembly-CSharp::Part
   ID: 12
-  partImage: {fileID: -7035639338505243944, guid: 56f19f50796174903bbf828b99eed525, type: 3}
+  partImage: {fileID: 21300000, guid: 56f19f50796174903bbf828b99eed525, type: 3}
   word: 
   type: 2

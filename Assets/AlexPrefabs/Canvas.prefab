@@ -2492,7 +2492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4415095, g: 0.31060365, b: 0.105795644, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2681,17 +2681,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fc3adaf7a64664d1b9149efdcbb8baf9, type: 2}
   - {fileID: 11400000, guid: d32d835d1701641c7bc95ede75daec8b, type: 2}
   - {fileID: 11400000, guid: 84107e4e23a59447b87608b8862c9a4c, type: 2}
-  - {fileID: 11400000, guid: faa577e47982f431b9e2be078b9ccc16, type: 2}
+  - {fileID: 11400000, guid: a42e293195e7cd64ca2aae8ac1a7ee66, type: 2}
   - {fileID: 11400000, guid: 91766029d4eea46d9acc594439220e21, type: 2}
   - {fileID: 11400000, guid: 1d1c82aef3a474110b29d37653081fac, type: 2}
   - {fileID: 11400000, guid: 480a10c84a3234c1592f6e07b01170a2, type: 2}
   - {fileID: 11400000, guid: de949e90300d649cc8b23604c11b1332, type: 2}
-  - {fileID: 11400000, guid: ac759ec9fc1a6450e913702cec34c818, type: 2}
+  - {fileID: 11400000, guid: f5fbca4a335657e45872c0a7a5036f3d, type: 2}
   - {fileID: 11400000, guid: 695aa5f3662a24586ba3b6a86e017fec, type: 2}
   - {fileID: 11400000, guid: e4c83d8fb38fb4de38a77de281e5bab6, type: 2}
   - {fileID: 11400000, guid: 1c7a79a0f620143da85012ae195438bb, type: 2}
-  - {fileID: 11400000, guid: 50c890d5e51e3430199e5df6aca01436, type: 2}
-  - {fileID: 11400000, guid: 6cd7a240913de4e9781d8b9ad4bda13d, type: 2}
+  - {fileID: 11400000, guid: 6f3648f2eb49d1e4e9fd54c638dfdfc6, type: 2}
+  - {fileID: 11400000, guid: abf6b521832eaef4889c0aa2472303bc, type: 2}
   word_list:
   - HI
   - BYE

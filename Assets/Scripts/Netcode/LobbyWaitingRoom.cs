@@ -100,7 +100,8 @@ public class LobbyWaitingRoom : MonoBehaviour
 
     public void TryStartGame()
     {
-        if(!session.IsHost || session.PlayerCount < 2)
+        // Change this back
+        if(!session.IsHost || session.PlayerCount < 1)
         {
             return;
         }

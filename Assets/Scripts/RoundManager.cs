@@ -27,8 +27,8 @@ public class RoundManager : NetworkBehaviour
         results
     }
     RoundName currentRound;
-    public const float facebuildingRoundTimer = 90;
-    public const float votingRoundTimer = 20;
+    public const float facebuildingRoundTimer = 60;
+    public const float votingRoundTimer = 35;
     public const float resultsRoundTimer = 15;
 
     public override void OnNetworkSpawn()
@@ -81,14 +81,14 @@ public class RoundManager : NetworkBehaviour
                 {
                     VotingCanvas.FinalizeVoting();
                     currentRound = RoundName.tabulating;
-                    ShowLoadingScreenClientRPC();
+                    //ShowLoadingScreenClientRPC();
                 }
                 break;
             case RoundName.tabulating:
                 if (VotingCanvas.votingComplete.Value)
                 {
                     currentRound = RoundName.results;
-                    CloseLoadingScreenClientRPC();
+                    //CloseLoadingScreenClientRPC();
                 }
                 break;
 

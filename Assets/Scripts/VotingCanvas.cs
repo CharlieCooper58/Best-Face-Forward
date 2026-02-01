@@ -53,6 +53,7 @@ public class VotingCanvas : NetworkBehaviour
     public void StartVotingRoundClientRPC()
     {
         content.SetActive(true);
+        currentVote = "";
         var players = RoundManager.session.Players;
         themeText.text = ResponseManager.instance.roundTheme;
         promptText.text = ResponseManager.instance.roundPrompt;
@@ -110,6 +111,7 @@ public class VotingCanvas : NetworkBehaviour
     [Rpc(SendTo.ClientsAndHost)]
     public void FinalizeVotingClientRPC()
     {
+        Debug.Log(currentVote);
         SendVoteServerRPC(currentVote);
     }
     [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
@@ -118,6 +120,7 @@ public class VotingCanvas : NetworkBehaviour
         if(vote != "")
         {
             votes.Add(vote);
+            Debug.Log(votes);
         }
         resultsReceived++;
         TryCompleteVoting();
@@ -132,6 +135,7 @@ public class VotingCanvas : NetworkBehaviour
     }
     void CompleteVoting()
     {
+        Debug.Log("Voting complete!");
         votingComplete.Value = true;
         for(int i = 0; i < votes.Count; i++)
         {
@@ -145,6 +149,7 @@ public class VotingCanvas : NetworkBehaviour
     {
         votes = votesSerialized.Split('|').ToList();
         StartCoroutine(DisplayVotes());
+        Debug.Log("Displaying votes!");
     }
     IEnumerator DisplayVotes()
     {

@@ -69,8 +69,7 @@ public class RoundManager : NetworkBehaviour
                 }
                 break;
             case RoundName.voting:
-
-
+                break;
         }
     }
 

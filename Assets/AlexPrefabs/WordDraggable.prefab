@@ -248,8 +248,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7859071823512218801, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8962061073180782004}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2273687012619864113, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7320639419843156572}
   m_SourcePrefab: {fileID: 100100000, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
+--- !u!1 &216021983684461617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2273687012619864113, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
+  m_PrefabInstance: {fileID: 2121956918377335808}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7320639419843156572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216021983684461617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a974c38b4f2456e844cb84c363bf4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DraggableWord
+  my_part: {fileID: 0}
+  response_idx: 0
 --- !u!224 &8098524071323132081 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7859071823512218801, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}

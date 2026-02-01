@@ -67,7 +67,7 @@ public class DraggableImage : DraggableItem
             if(r.gameObject.CompareTag("home") && r.gameObject.GetComponentInChildren<DraggableItem>()==null){
                 return r.gameObject.transform;
             }
-            if(r.gameObject.GetComponent<DraggableSlot>() != null){
+            if(r.gameObject.GetComponent<DraggableSlot>() != null && r.gameObject.GetComponentInChildren<DraggableItem>()==null){
                 if(r.gameObject.GetComponent<DraggableSlot>().GetSlotType() == my_part.GetPartType()){
                     return r.gameObject.transform;
                 }

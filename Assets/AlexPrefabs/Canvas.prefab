@@ -585,13 +585,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5848158937480028964}
+  m_Children: []
   m_Father: {fileID: 4816997809207162966}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000015457139}
+  m_AnchoredPosition: {x: 0, y: 0.000030286146}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &2775593078650906168
@@ -1087,12 +1086,12 @@ RectTransform:
   - {fileID: 2070741841044280438}
   - {fileID: 4929574324456657698}
   - {fileID: 3189020286316761487}
-  m_Father: {fileID: 15934381469207242}
+  m_Father: {fileID: 7171123168530380080}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.4}
-  m_AnchoredPosition: {x: 8.499939, y: -111.88379}
-  m_SizeDelta: {x: 16.999992, y: 291.8835}
+  m_AnchoredPosition: {x: -0.00012207031, y: 10.135864}
+  m_SizeDelta: {x: -20.000008, y: -20.136108}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &6922906686903286364
 CanvasRenderer:
@@ -1359,6 +1358,7 @@ RectTransform:
   m_Children:
   - {fileID: 8302841885623504854}
   - {fileID: 4870656344904353120}
+  - {fileID: 5848158937480028964}
   - {fileID: 5888842982524374490}
   m_Father: {fileID: 1120940874753558077}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1938,7 +1938,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 7865280977365332242}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9975429
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2975,7 +2975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 0
+  GlobalObjectIdHash: 2604693714
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -3008,6 +3008,7 @@ MonoBehaviour:
   round3Themes: {fileID: 0}
   themeText: {fileID: 0}
   promptText: {fileID: 0}
+  contents: {fileID: 0}
 --- !u!1 &9155458781740384678
 GameObject:
   m_ObjectHideFlags: 0

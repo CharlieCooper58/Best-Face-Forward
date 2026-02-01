@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff67857b646bbc4f997ddb72e64bdf7, type: 3}
   m_Name: PlaceholderEye 2
   m_EditorClassIdentifier: Assembly-CSharp::Part
-  ID: 12345
-  partImage: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  ID: 3
+  partImage: {fileID: 8890803162451565297, guid: 4c12ceb4654cd4b28a33f9c93fa6f14a, type: 3}
+  word: 
   type: 0

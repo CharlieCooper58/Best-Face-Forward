@@ -25,6 +25,9 @@ public class Part : ScriptableObject
     public void SetWord(string my_word){
         word = my_word;
     }
+    public void SetID(string id){
+        ID = id;
+    }
 }
 public enum FeatureType
     {

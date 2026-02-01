@@ -8,16 +8,18 @@ using UnityEngine.UI;
 public class DraggableWord : DraggableItem
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    [SerializeField] private int response_idx;
     protected override void Start()
     {
-        response_idx = -1;
         base.Start();
         //Setup word object
         Setup();
     }
     public void Setup(){
-        GetComponentInChildren<TextMeshProUGUI>().text = my_part.GetID();
+        if(my_part.GetID() != null){
+            GetComponentInChildren<TextMeshProUGUI>().text = my_part.GetID();
+        } else {
+            Debug.LogError("The ID of a word should not usually be none unless creating at start");
+        }
     }
 
     // Update is called once per frame

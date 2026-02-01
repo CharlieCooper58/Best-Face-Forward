@@ -92,10 +92,11 @@ public class InventoryManager : MonoBehaviour
         for(int i = 0; i < num_words; i++){
             Part word = new Part();
             word.SetType(FeatureType.word);
-            word.SetWord(rand_player_words[i]);
-            word_parent_t.GetChild(i).GetComponentInChildren<DraggableImage>().SetPart(mouth_player_scriptables[i]);
-            word_parent_t.GetChild(i).GetComponentInChildren<DraggableImage>().Setup();
-        }
+            word.SetID(rand_player_words[i]);
+            print(word.GetID());
+            word_parent_t.GetChild(i).GetComponent<DraggableWord>().SetPart(word);
+            word_parent_t.GetChild(i).GetComponent<DraggableWord>().Setup();
+            }
     }
 
     public void ShowEyes(){

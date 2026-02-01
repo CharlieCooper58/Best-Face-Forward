@@ -13,6 +13,6 @@ public class TimerResponse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<TextMeshProUGUI>().text = ((int)ResponseManager.rM.GetTimer()).ToString();
+        //GetComponent<TextMeshProUGUI>().text = ((int)ResponseManager.rM.GetTimer()).ToString();
     }
 }

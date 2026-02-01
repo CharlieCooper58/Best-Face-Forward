@@ -121,7 +121,4 @@ public class ResponseManager : NetworkBehaviour
     public List<string> GetResponseList(){
         return prompt_response;
     }
-    public float GetTimer(){
-        return timer;
-    }
 }

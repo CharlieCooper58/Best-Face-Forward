@@ -5,11 +5,14 @@ using UnityEngine;
 public class RoundManager : NetworkBehaviour
 {
     public static RoundManager instance;
-    ISession session;
+    public ISession session;
     public NetworkVariable<int> playersConnected = new NetworkVariable<int>(0);
     public int roundCount = 1;
 
     [SerializeField] GameObject LoadingCanvas;
+    [SerializeField] VotingCanvas VotingCanvas;
+
+    public float timer;
     enum RoundName
     {
         waitForPlayers,
@@ -44,6 +47,7 @@ public class RoundManager : NetworkBehaviour
         {
             return;
         }
+        timer -= Time.deltaTime;
         switch(currentRound)
         {
             case RoundName.waitForPlayers:
@@ -52,10 +56,20 @@ public class RoundManager : NetworkBehaviour
                     currentRound = RoundName.facebuilding;
                     Debug.Log("All players connected!");
                     StartRoundOneClientRPC();
+                    timer = facebuildingRoundTimer;
                 }
                 break;
             case RoundName.facebuilding:
+                if(timer <= 0)
+                {
+                    ResponseManager.rM.EndFaceBuildingRound();
+                    currentRound = RoundName.voting;
+                    // To do: add animation showing time's up
+                    // Add sound effect showing time's up
+                }
                 break;
+            case RoundName.voting:
+
 
         }
     }

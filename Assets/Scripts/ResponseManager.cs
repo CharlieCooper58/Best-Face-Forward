@@ -26,15 +26,17 @@ public class ResponseManager : NetworkBehaviour
 
     bool roundIsActive;
 
-    private float timer;
     public void StartFacebuildingRound()
     {
         //RandomizeFaceParts();
         //RandomizeWordbanks();
         ChooseTheme();
         roundIsActive = true;
-        timer = RoundManager.facebuildingRoundTimer;
         contents.SetActive(true);
+    }
+    public void EndFaceBuildingRound()
+    {
+        TimesUpClientRPC();
     }
     void Start()
     {
@@ -46,14 +48,7 @@ public class ResponseManager : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsServer && roundIsActive)
-        {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
-            {
-                TimesUpClientRPC();
-            }
-        }
+
 
     }
     [Rpc(SendTo.ClientsAndHost)]

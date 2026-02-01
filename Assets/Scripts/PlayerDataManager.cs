@@ -32,6 +32,10 @@ public class PlayerDataManager : NetworkBehaviour
     {
         playerDataDict[ID].SetResponses(parts, response);
     }
+    public string[] GetResponse(string ID)
+    {
+        return playerDataDict[ID].GetResponse();
+    }
 }
 
 class PlayerData
@@ -63,5 +67,16 @@ class PlayerData
         nose = "";
         mouth = "";
         response = "";
+    }
+    public string[] GetResponse()
+    {
+        var responseArray = new string[]
+        {
+            eye,
+            nose,
+            mouth,
+            response
+        };
+        return responseArray;
     }
 }

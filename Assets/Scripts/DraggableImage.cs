@@ -12,7 +12,7 @@ public class DraggableImage : DraggableItem
     {
         base.Start();
         //Setup objects
-        Setup();
+        //Setup();
     }
     public void Setup(){
         image = GetComponent<Image>();
@@ -40,13 +40,13 @@ public class DraggableImage : DraggableItem
                     if(new_parent.gameObject.GetComponentInChildren<DraggableItem>()==null){
                         //Remove the part from the manager
                         print("Removing the image from the face and placing it home");
-                        ResponseManager.rM.RemoveItem(my_part);
+                        ResponseManager.instance.RemoveItem(my_part);
                         can_add = true;
                     }
                 } else {
                     //We know it matches the part so we're adding a part to the response
                     print("Adding a facial feature to the response.");
-                    can_add = ResponseManager.rM.AddItem(my_part);
+                    can_add = ResponseManager.instance.AddItem(my_part);
                 }
                 //If there is no conflicting thing in the slot
                 if(can_add){

@@ -12,7 +12,10 @@ public class RoundManager : NetworkBehaviour
     [SerializeField] GameObject LoadingCanvas;
     [SerializeField] VotingCanvas VotingCanvas;
 
-    public float timer;
+    [SerializeField] TransitionCanvas transitionCanvas;
+
+
+    public NetworkVariable<float> timer = new NetworkVariable<float>(0f);
     enum RoundName
     {
         waitForPlayers,
@@ -20,10 +23,11 @@ public class RoundManager : NetworkBehaviour
         prompt,
         facebuilding,
         voting,
+        tabulating,
         results
     }
     RoundName currentRound;
-    public const float facebuildingRoundTimer = 60;
+    public const float facebuildingRoundTimer = 90;
     public const float votingRoundTimer = 20;
     public const float resultsRoundTimer = 15;
 
@@ -43,11 +47,11 @@ public class RoundManager : NetworkBehaviour
     }
     private void Update()
     {
-        if (!IsHost)
+        if (!IsServer)
         {
             return;
         }
-        timer -= Time.deltaTime;
+        timer.Value -= Time.deltaTime;
         switch(currentRound)
         {
             case RoundName.waitForPlayers:
@@ -55,28 +59,55 @@ public class RoundManager : NetworkBehaviour
                 {
                     currentRound = RoundName.facebuilding;
                     Debug.Log("All players connected!");
-                    StartRoundOneClientRPC();
-                    timer = facebuildingRoundTimer;
+                    CloseLoadingScreenClientRPC();
+                    ResponseManager.instance.StartFacebuildingRound();
+
+                    timer.Value = facebuildingRoundTimer;
                 }
                 break;
             case RoundName.facebuilding:
-                if(timer <= 0)
+                if(timer.Value <= 0)
                 {
-                    ResponseManager.rM.EndFaceBuildingRound();
+                    ResponseManager.instance.EndFaceBuildingRound();
                     currentRound = RoundName.voting;
+                    timer.Value = votingRoundTimer;
+                    VotingCanvas.StartVotingRound();
                     // To do: add animation showing time's up
                     // Add sound effect showing time's up
                 }
                 break;
             case RoundName.voting:
+                if(timer.Value <= 0)
+                {
+                    VotingCanvas.FinalizeVoting();
+                    currentRound = RoundName.tabulating;
+                    ShowLoadingScreenClientRPC();
+                }
                 break;
+            case RoundName.tabulating:
+                if (VotingCanvas.votingComplete.Value)
+                {
+                    currentRound = RoundName.results;
+                    CloseLoadingScreenClientRPC();
+                }
+                break;
+
         }
     }
 
     [Rpc(SendTo.Everyone)]
-    public void StartRoundOneClientRPC()
+    public void CloseLoadingScreenClientRPC()
     {
-        LoadingCanvas.SetActive(false);
-        ResponseManager.rM.StartFacebuildingRound();
+        transitionCanvas.CloseLoadingScreen();
+    }
+    [Rpc(SendTo.Everyone)]
+    public void ShowLoadingScreenClientRPC()
+    {
+        transitionCanvas.ShowLoadingScreen();
+    }
+
+    public int GetTimer()
+    {
+        return (int)timer.Value;
     }
 }

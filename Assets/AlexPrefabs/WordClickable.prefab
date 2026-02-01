@@ -147,19 +147,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2273687012619864113, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
       propertyPath: m_Name
-      value: WordDraggable
+      value: WordClickable
       objectReference: {fileID: 0}
     - target: {fileID: 4260182318727125321, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4260182318727125321, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4260182318727125321, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7859071823512218801, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
       propertyPath: m_Pivot.x
@@ -187,11 +187,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7859071823512218801, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 171.81
       objectReference: {fileID: 0}
     - target: {fileID: 7859071823512218801, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 57.98
       objectReference: {fileID: 0}
     - target: {fileID: 7859071823512218801, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -251,14 +251,17 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2273687012619864113, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7320639419843156572}
+      addedObject: {fileID: 2588987932672704398}
+    - targetCorrespondingSourceObject: {fileID: 2273687012619864113, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3593120817808078260}
   m_SourcePrefab: {fileID: 100100000, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
 --- !u!1 &216021983684461617 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2273687012619864113, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
   m_PrefabInstance: {fileID: 2121956918377335808}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7320639419843156572
+--- !u!114 &2588987932672704398
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,11 +270,66 @@ MonoBehaviour:
   m_GameObject: {fileID: 216021983684461617}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57a974c38b4f2456e844cb84c363bf4b, type: 3}
+  m_Script: {fileID: 11500000, guid: d453215e6a1979b40bc1728a85f5bd95, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DraggableWord
-  my_part: {fileID: 0}
-  response_idx: 0
+  m_EditorClassIdentifier: '::'
+  wordSwapButton: {fileID: 3593120817808078260}
+  wordText: {fileID: 7300362125531901951}
+--- !u!114 &3593120817808078260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216021983684461617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0.3886792, g: 0.3886792, b: 0.3886792, a: 1}
+    m_HighlightedColor: {r: 0.21509439, g: 0.21509439, b: 0.21509439, a: 1}
+    m_PressedColor: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2769011922823091529}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2769011922823091529 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4260182318727125321, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}
+  m_PrefabInstance: {fileID: 2121956918377335808}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216021983684461617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!224 &8098524071323132081 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7859071823512218801, guid: 7dd2525e78cad40d1b4c18d93f355e11, type: 3}

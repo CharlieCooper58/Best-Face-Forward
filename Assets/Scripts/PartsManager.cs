@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PartsManager : MonoBehaviour
 {
-    Part[] parts;
+    [SerializeField] Part[] parts;
     Dictionary<string, Part> partsDict;
     void Start()
     {

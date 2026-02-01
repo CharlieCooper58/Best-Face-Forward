@@ -34,6 +34,7 @@ public class LobbyWaitingRoom : MonoBehaviour
         lobbyNameText.text = session.Name;
         session.PlayerJoined += Session_PlayerJoined;
         session.PlayerHasLeft += Session_PlayerLeft;
+        startGameButton.gameObject.SetActive(session.IsHost);
     }
 
 
@@ -103,6 +104,7 @@ public class LobbyWaitingRoom : MonoBehaviour
         {
             return;
         }
+        session.AsHost().IsLocked = true;
         NetworkManager.Singleton.SceneManager.LoadScene(gameSceneName, UnityEngine.SceneManagement.LoadSceneMode.Single);
     }
 }

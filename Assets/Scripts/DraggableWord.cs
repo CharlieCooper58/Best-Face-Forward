@@ -14,7 +14,7 @@ public class DraggableWord : DraggableItem
         response_idx = -1;
         base.Start();
         //Setup word object
-        Setup();
+        //Setup();
     }
     public void Setup(){
         GetComponentInChildren<TextMeshProUGUI>().text = my_part.GetID();
@@ -47,7 +47,7 @@ public class DraggableWord : DraggableItem
                 }
                 print(new_parent.name);*/
                 transform.parent = new_parent;
-                print(ResponseManager.rM.GetResponse());
+                print(ResponseManager.instance.GetResponse());
             }
             /*if(transform.position != transform.parent.position) {
                 //Eventually run a coroutine / timer that linearly interpolates to goal.

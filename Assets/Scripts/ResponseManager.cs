@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class ResponseManager : NetworkBehaviour
 {
-    public static ResponseManager rM;
+    public static ResponseManager instance;
     [SerializeField] private Part[] face_parts;
     [SerializeField] private List<string> prompt_response;
     [SerializeField] private GameObject response_parent;
@@ -21,16 +21,27 @@ public class ResponseManager : NetworkBehaviour
     [SerializeField] TMP_Text promptText;
     [SerializeField] GameObject contents;
 
-    string roundTheme;
-    string roundPrompt;
+    public string roundTheme;
+    public string roundPrompt;
 
     bool roundIsActive;
-
+    void Start()
+    {
+        instance = this;
+        prompt_response = new List<string>();
+        face_parts = new Part[3]; //Eye, nose, mouth
+    }
     public void StartFacebuildingRound()
     {
-        //RandomizeFaceParts();
-        //RandomizeWordbanks();
         ChooseTheme();
+        StartFaceBuildingRoundClientRPC(roundTheme, roundPrompt);
+    }
+    [Rpc(SendTo.ClientsAndHost)]
+    public void StartFaceBuildingRoundClientRPC(string theme, string prompt)
+    {
+        Debug.Log("Start those faces!");
+        SetThemeAndPrompt(theme, prompt);
+        InventoryManager.instance.DealNewHand();
         roundIsActive = true;
         contents.SetActive(true);
     }
@@ -38,26 +49,12 @@ public class ResponseManager : NetworkBehaviour
     {
         TimesUpClientRPC();
     }
-    void Start()
-    {
-        rM = this;
-        prompt_response = new List<string>();
-        face_parts = new Part[3]; //Eye, nose, mouth
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-
-    }
     [Rpc(SendTo.ClientsAndHost)]
     private void TimesUpClientRPC()
     {
         SubmitResultsServerRPC();
         contents.SetActive(false);
     }
-
     [Rpc(SendTo.Server)]
     public void SubmitResultsServerRPC()
     {
@@ -70,6 +67,13 @@ public class ResponseManager : NetworkBehaviour
         var rt = (RoundManager.instance.roundCount == 3 ? round3Themes.GetRandomTheme() : earlyThemes.GetRandomTheme());
         roundTheme = rt.theme;
         roundPrompt = rt.prompt;
+    }
+    public void SetThemeAndPrompt(string theme, string prompt)
+    {
+        themeText.text = theme;
+        promptText.text = prompt;
+        roundTheme = theme;
+        roundPrompt = prompt;
     }
     public bool AddItem(Part new_part){
         if(face_parts[(int)new_part.GetPartType()] == null){
@@ -98,7 +102,7 @@ public class ResponseManager : NetworkBehaviour
     public string[] GetPartsResponse(){
         string[] ans = new string[face_parts.Length];
         for(int i = 0; i < ans.Length; i++){
-            ans[i] = face_parts[i].GetID();
+            ans[i] = face_parts[i] != null ? face_parts[i].GetID() : "";
         }
         return ans;
     }
@@ -114,14 +118,12 @@ public class ResponseManager : NetworkBehaviour
     public string GetResponse(){
         string ans = "";
         for(int i = 0; i < response_parent.transform.childCount; i++){
-            ans += response_parent.transform.GetChild(i).GetComponent<DraggableWord>().GetPart().GetID();
+            ans += response_parent.transform.GetChild(i).GetComponent<ClickableWord>().GetWord();
+            ans += " ";
         }
         return ans;
     }
     public List<string> GetResponseList(){
         return prompt_response;
-    }
-    public float GetTimer(){
-        return timer;
     }
 }

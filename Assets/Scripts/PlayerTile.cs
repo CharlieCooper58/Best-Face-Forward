@@ -8,11 +8,36 @@ public class PlayerTile : MonoBehaviour
     [SerializeField] Image noseImage;
     [SerializeField] Image mouthImage;
     [SerializeField] TMP_Text responseText;
+    public Button voteButton;
+    public string playerID;
 
-    string playerID;
+    [SerializeField] Transform voteTabulationArea;
+    [SerializeField] GameObject voteTally;
 
-    public void SetDetails(string ID, string eyesHash, string noseHash, string mouthHash, string repsonse)
+    AudioSource blingPlayer;
+
+    private void Awake()
     {
-        
+        voteButton = GetComponentInChildren<Button>();
+    }
+    public void SetDetails(string ID, string eyesHash, string noseHash, string mouthHash, string response)
+    {
+        playerID = ID;
+        eyesImage.sprite = InventoryManager.instance.GetSpriteFromPartName(eyesHash);
+        noseImage.sprite = InventoryManager.instance.GetSpriteFromPartName(noseHash);
+        mouthImage.sprite = InventoryManager.instance.GetSpriteFromPartName(mouthHash);
+        responseText.text = response;
+    }
+    public void ResetVotes()
+    {
+        for(int i = voteTabulationArea.childCount-1; i >= 0; i--)
+        {
+            Destroy(voteTabulationArea.GetChild(i));
+        }
+    }
+    public void AddVote()
+    {
+        SoundEffectManager.instance.PlaySoundByName("AddPoint");
+        Instantiate(voteTally, voteTabulationArea);
     }
 }

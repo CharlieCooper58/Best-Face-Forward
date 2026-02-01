@@ -11,30 +11,38 @@ public class PlayerDataManager : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
+        instance = this;
         session = SessionManager.instance.ActiveSession;
-        if (IsServer)
-        {
-            playerDataDict = new();
-            var players = session.Players;
-            foreach (var p in players)
-            {
-                var playerName = "Unknown";
-                if (p.Properties.TryGetValue("playerName", out var playerNameProperty))
-                    playerName = playerNameProperty.Value;
-                PlayerData dat = new PlayerData(p.Id,playerName);
-                playerDataDict[p.Id] = dat;
-            }
-        }
-    }
 
-    // Note: this isn't hooked up to anything yet.  Need to set up the RPC calls for this in ResponseManager
+        playerDataDict = new();
+        var players = session.Players;
+        foreach (var p in players)
+        {
+            var playerName = "Unknown";
+            if (p.Properties.TryGetValue("playerName", out var playerNameProperty))
+                playerName = playerNameProperty.Value;
+            PlayerData dat = new PlayerData(p.Id,playerName);
+            playerDataDict[p.Id] = dat;
+        }
+        
+    }
+    
     public void RegisterPlayerResponses(string ID, string[] parts, string response)
     {
-        playerDataDict[ID].SetResponses(parts, response);
+        RegisterPlayerResponseClientRPC(ID, parts[0], parts[1], parts[2], response);
+    }
+    [Rpc(SendTo.ClientsAndHost)]
+    public void RegisterPlayerResponseClientRPC(string ID, string eye, string nose, string mouth, string response)
+    {
+        playerDataDict[ID].SetResponses(new string[] {eye, nose, mouth}, response);
     }
     public string[] GetResponse(string ID)
     {
         return playerDataDict[ID].GetResponse();
+    }
+    public void AwardPoint(string ID)
+    {
+        playerDataDict[ID].AddPoint();
     }
 }
 
@@ -78,5 +86,9 @@ class PlayerData
             response
         };
         return responseArray;
+    }
+    public void AddPoint()
+    {
+        score++;
     }
 }

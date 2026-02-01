@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 75e90ea4c59e147b980a78e71faaa1a0
+guid: 56f449cb008d8e5448d9b64b318a1ff4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -173251701639791086
-    second: Face-Layer_2 (2)_0
+      213: -6614775368240994646
+    second: Time's Up!_0
+  - first:
+      213: -7988757442643342959
+    second: Time's Up!_1
+  - first:
+      213: -6318528314609881031
+    second: Time's Up!_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Face-Layer_2 (2)_0
+      name: Time's Up!_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 952
-        height: 1168
+        x: 5
+        y: 35
+        width: 342
+        height: 115
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 21e370bce7c789df0800000000000000
-      internalID: -173251701639791086
+      spriteID: aa6edf269d89334a0800000000000000
+      internalID: -6614775368240994646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time's Up!_1
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 35
+        width: 76
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1994c72ae6b322190800000000000000
+      internalID: -7988757442643342959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time's Up!_2
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 6
+        width: 217
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9303e6099f31058a0800000000000000
+      internalID: -6318528314609881031
       vertices: []
       indices: 
       edges: []
@@ -138,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Face-Layer_2 (2)_0: -173251701639791086
+      Time's Up!_0: -6614775368240994646
+      Time's Up!_1: -7988757442643342959
+      Time's Up!_2: -6318528314609881031
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -54,6 +54,17 @@ public class PlayerDataManager : NetworkBehaviour
     }
     public void RegisterPlayerResponses(string ID, string[] parts, string response)
     {
+        for(int i = 0; i< parts.Length; i++)
+        {
+            if (parts[i] == null || parts[i] == "")
+            {
+                parts[i] = "Empty";
+            }
+        }
+        if(response == "" || response == null)
+        {
+            response = "This player didn't think this was worth their time.";
+        }
         playerDataDict[ID].SetResponses(parts, response);
     }
     

@@ -33,9 +33,9 @@ public class RoundManager : NetworkBehaviour
     RoundName currentRound;
 
     RoundName nextRound;
-    public const float facebuildingRoundTimer = 30;
-    public const float votingRoundTimer = 20;
-    public const float tabulatingTimer = 10;
+    public const float facebuildingRoundTimer = 45f;
+    public const float votingRoundTimer = 20f;
+    public const float tabulatingTimer = 6;
 
     public override void OnNetworkSpawn()
     {

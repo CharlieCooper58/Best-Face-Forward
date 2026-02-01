@@ -46,7 +46,12 @@ public class InventoryManager : MonoBehaviour
         List<Part> mouthParts = new List<Part>();
         for (int i = 0; i<allPartsList.Length; i++)
         {
-            partsDictionary.Add(allPartsList[i].name, allPartsList[i]);
+            var id = allPartsList[i].GetID();
+            if (!string.IsNullOrEmpty(id) && !partsDictionary.TryGetValue(id, out var p))
+            {
+                partsDictionary.Add(id, allPartsList[i]);
+
+            }
             switch (allPartsList[i].type)
             {
                 case FeatureType.eyes:
@@ -158,8 +163,10 @@ public class InventoryManager : MonoBehaviour
 
     public Sprite GetSpriteFromPartName(string partName)
     {
-        if(partName != null && partsDictionary.TryGetValue(partName, out var part))
+        Debug.Log(partName);
+        if((partName != null && partName != "Empty") && partsDictionary.TryGetValue(partName, out var part))
         {
+            Debug.Log("Found Part!");
             return part.GetImage();
         }
         else

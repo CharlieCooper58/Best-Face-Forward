@@ -27,7 +27,7 @@ public class ClickableWord : MonoBehaviour
 
     private void SwapWordPosition()
     {
-        SoundEffectManager.instance.PlaySoundByName("DialogueSelect", 1.8f, 0.02f);
+        SoundEffectManager.instance.PlaySoundByName("DialogueSelect", 2f, 0.02f);
         if (isInWordBank)
         {
             transform.SetParent(responseAreaTransform, false);

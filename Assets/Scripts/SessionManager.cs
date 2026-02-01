@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class SessionManager : MonoBehaviour
 {
@@ -114,5 +115,16 @@ public class SessionManager : MonoBehaviour
         {
             activeSession = null;
         }
+    }
+
+    public async void EndGame()
+    {
+        try { await ActiveSession.LeaveAsync(); }
+        catch { }
+        finally
+        {
+            activeSession = null;
+        }
+        SceneManager.LoadScene("Main Menu");
     }
 }

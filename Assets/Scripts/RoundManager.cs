@@ -16,6 +16,7 @@ public class RoundManager : NetworkBehaviour
     [SerializeField] VotingCanvas VotingCanvas;
 
     [SerializeField] TransitionCanvas transitionCanvas;
+    [SerializeField] WinnerCanvas winnerCanvas;
 
 
     public NetworkVariable<float> timer = new NetworkVariable<float>(0f);
@@ -34,7 +35,7 @@ public class RoundManager : NetworkBehaviour
     RoundName nextRound;
     public const float facebuildingRoundTimer = 30;
     public const float votingRoundTimer = 20;
-    public const float resultsRoundTimer = 15;
+    public const float tabulatingTimer = 10;
 
     public override void OnNetworkSpawn()
     {
@@ -83,6 +84,7 @@ public class RoundManager : NetworkBehaviour
                     {
                         currentRound = RoundName.tabulating;
                         VotingCanvas.CompleteVoting();
+                        timer.Value = tabulatingTimer;
                     }
                 }
                 break;
@@ -108,10 +110,10 @@ public class RoundManager : NetworkBehaviour
                 }
                 break;
             case RoundName.tabulating:
-                if (VotingCanvas.votingComplete.Value)
+                if (timer.Value <= 0)
                 {
                     currentRound = RoundName.results;
-                    //CloseLoadingScreenClientRPC();
+                    ShowWinnerClientRPC(PlayerDataManager.instance.GetWinner());
                 }
                 break;
 
@@ -157,5 +159,12 @@ public class RoundManager : NetworkBehaviour
     public void RegisterResponse()
     {
         playerResponses.Value++;
+    }
+
+    [Rpc(SendTo.ClientsAndHost)]
+    public void ShowWinnerClientRPC(string winner)
+    {
+        winnerCanvas.gameObject.SetActive(true);
+        winnerCanvas.DeclareWinner(winner);
     }
 }

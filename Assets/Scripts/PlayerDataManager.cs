@@ -65,6 +65,21 @@ public class PlayerDataManager : NetworkBehaviour
     {
         playerDataDict[ID].AddPoint();
     }
+
+    public string GetWinner()
+    {
+        int highScore = 0;
+        string winnerName = "";
+        foreach(var val in playerDataDict.Values)
+        {
+            if(val.score > highScore)
+            {
+                highScore = val.score;
+                winnerName = val.PlayerName;
+            }
+        }
+        return winnerName;
+    }
 }
 
 class PlayerData

@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2467637810875240023
 RectTransform:
   m_ObjectHideFlags: 0
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
   GlobalObjectIdHash: 1768302985
-  InScenePlacedSourceGlobalObjectIdHash: 0
+  InScenePlacedSourceGlobalObjectIdHash: 2578148101
   DeferredDespawnTick: 0
   Ownership: 1
   AlwaysReplicateAsRoot: 0
@@ -447,6 +447,7 @@ MonoBehaviour:
   content: {fileID: 1160541767113658367}
   votingComplete:
     m_InternalValue: 0
+  timer: {fileID: 6592062356500405974}
 --- !u!1 &6067262678502583854
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,5 +883,10 @@ PrefabInstance:
 --- !u!224 &5594950730479934043 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3549379439529511304, guid: 6a0b5ff0697e4ac4b87354c5bca1e0ea, type: 3}
+  m_PrefabInstance: {fileID: 8999511197517272019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6592062356500405974 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2855029318093147397, guid: 6a0b5ff0697e4ac4b87354c5bca1e0ea, type: 3}
   m_PrefabInstance: {fileID: 8999511197517272019}
   m_PrefabAsset: {fileID: 0}

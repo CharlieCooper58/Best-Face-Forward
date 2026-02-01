@@ -39,6 +39,8 @@ public class VotingCanvas : NetworkBehaviour
     int expectedVotes;
     public NetworkVariable<bool> votingComplete = new NetworkVariable<bool>(false);
 
+    [SerializeField] GameObject timer;
+
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
@@ -77,6 +79,7 @@ public class VotingCanvas : NetworkBehaviour
             tileChildren[i].voteButton.onClick.AddListener(() => SetVote(ID));
             tilesDict.Add(ID, tileChildren[i]);
         }
+        timer.SetActive(true);
         
     }
 
@@ -110,6 +113,7 @@ public class VotingCanvas : NetworkBehaviour
             playerTile.DisableButton();
         }
         SendVoteServerRPC(currentVote);
+        timer.SetActive(false);
     }
     [Rpc(SendTo.Server, InvokePermission = RpcInvokePermission.Everyone)]
     public void SendVoteServerRPC(string vote)

@@ -17,6 +17,12 @@ public class WinnerCanvas : MonoBehaviour
 
     void ReturnToLobby()
     {
+        SoundEffectManager.instance.PlaySoundByName("UI_Cancel", 1.5f);
         SessionManager.instance.EndGame();
+    }
+
+    public void PlayDrumroll()
+    {
+        SoundEffectManager.instance.PlaySoundByName("Drumroll");
     }
 }

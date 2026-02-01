@@ -24,6 +24,7 @@ public class LobbyJoinButton : MonoBehaviour
 
     async Task JoinLobby()
     {
+        SoundEffectManager.instance.PlaySoundByName("UI_Confirm", 1.5f, .02f);
         try
         {
             await SessionManager.instance.JoinSessionByID(mySession.Id);

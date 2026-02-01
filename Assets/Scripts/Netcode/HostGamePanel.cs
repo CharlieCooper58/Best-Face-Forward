@@ -19,7 +19,7 @@ public class HostGamePanel : MonoBehaviour
         {
             return;
         }
-        
+        SoundEffectManager.instance.PlaySoundByName("UI_Confirm", 1.5f, .02f);
         await SessionManager.instance.StartSessionAsHost(lobbyNameField.text);
         lobbyNameField.text = string.Empty;
         inLobbyPanel.gameObject.SetActive(true);

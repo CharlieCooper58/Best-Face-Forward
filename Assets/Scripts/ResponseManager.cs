@@ -40,7 +40,7 @@ public class ResponseManager : NetworkBehaviour
     [Rpc(SendTo.ClientsAndHost)]
     public void StartFaceBuildingRoundClientRPC(string theme, string prompt)
     {
-        Debug.Log("Start those faces!");
+        SoundEffectManager.instance.PlayFaceMusic();
         SetThemeAndPrompt(theme, prompt);
         InventoryManager.instance.DealNewHand();
         roundIsActive = true;
@@ -53,6 +53,8 @@ public class ResponseManager : NetworkBehaviour
     [Rpc(SendTo.ClientsAndHost)]
     private void TimesUpClientRPC()
     {
+        SoundEffectManager.instance.StopMusic();
+        SoundEffectManager.instance.PlaySoundByName("FinishingWhistle", 0.8f);
         var partsResults = GetPartsResponse();
         var promptResults = GetResponse();
         StartCoroutine(HideContentsAfterDelay());

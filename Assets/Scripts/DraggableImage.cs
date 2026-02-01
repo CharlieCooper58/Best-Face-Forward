@@ -50,6 +50,7 @@ public class DraggableImage : DraggableItem
                 }
                 //If there is no conflicting thing in the slot
                 if(can_add){
+                    SoundEffectManager.instance.PlaySoundByName("FeatureDrop", 0.85f, 0.02f);
                     transform.parent = new_parent;
                     transform.position = transform.parent.position;
                 }

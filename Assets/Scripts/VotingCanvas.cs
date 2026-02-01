@@ -54,6 +54,7 @@ public class VotingCanvas : NetworkBehaviour
     [Rpc(SendTo.ClientsAndHost)]
     public void StartVotingRoundClientRPC(string serializedData)
     {
+        SoundEffectManager.instance.PlayVotingMusic();
         PlayerDataManager.instance.DeserializePlayerResponse(serializedData);
         content.SetActive(true);
         currentVote = "";
@@ -76,11 +77,14 @@ public class VotingCanvas : NetworkBehaviour
             tileChildren[i].SetDetails(players[i].Id, response[0], response[1], response[2], response[3]);
             var ID = tileChildren[i].playerID;
             tileChildren[i].voteButton.onClick.RemoveAllListeners();
-            tileChildren[i].voteButton.onClick.AddListener(() => SetVote(ID));
+            tileChildren[i].voteButton.onClick.AddListener(() =>
+            {
+                SetVote(ID);
+                SoundEffectManager.instance.PlaySoundByName("UI_Confirm", 1.5f, .02f);
+            });
             tilesDict.Add(ID, tileChildren[i]);
         }
         timer.SetActive(true);
-        
     }
 
     public void SetVote(string ID)
@@ -107,8 +111,9 @@ public class VotingCanvas : NetworkBehaviour
     [Rpc(SendTo.ClientsAndHost)]
     public void FinalizeVotingClientRPC()
     {
-        Debug.Log(currentVote);
-        foreach(var playerTile in tileChildren)
+        SoundEffectManager.instance.StopMusic();
+        SoundEffectManager.instance.PlaySoundByName("FinishingWhistle", 0.8f);
+        foreach (var playerTile in tileChildren)
         {
             playerTile.DisableButton();
         }

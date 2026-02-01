@@ -46,6 +46,7 @@ public class LobbyWaitingRoom : MonoBehaviour
 
     private void LeaveLobby()
     {
+        SoundEffectManager.instance.PlaySoundByName("UI_Cancel", 1.5f);
         SessionManager.instance.LeaveSession();
         gameObject.SetActive(false);
     }
@@ -105,6 +106,7 @@ public class LobbyWaitingRoom : MonoBehaviour
         {
             return;
         }
+        SoundEffectManager.instance.PlaySoundByName("UI_Confirm", 1.5f, .02f);
         session.AsHost().IsLocked = true;
         NetworkManager.Singleton.SceneManager.LoadScene(gameSceneName, UnityEngine.SceneManagement.LoadSceneMode.Single);
     }

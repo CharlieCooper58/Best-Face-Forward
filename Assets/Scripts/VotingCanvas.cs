@@ -55,6 +55,7 @@ public class VotingCanvas : NetworkBehaviour
     public void StartVotingRoundClientRPC(string serializedData)
     {
         SoundEffectManager.instance.PlayVotingMusic();
+        SoundEffectManager.instance.PlaySoundByName("DX_CastYourVote", 1.2f);
         PlayerDataManager.instance.DeserializePlayerResponse(serializedData);
         content.SetActive(true);
         currentVote = "";
@@ -146,6 +147,7 @@ public class VotingCanvas : NetworkBehaviour
     public void DisplayVotingResultsClientRPC(string votesSerialized)
     {
         votes = votesSerialized.Split('|').ToList();
+        SoundEffectManager.instance.PlaySoundByName("DX_ResultsAreIn", 1.2f);
         StartCoroutine(DisplayVotes());
         Debug.Log("Displaying votes!");
     }

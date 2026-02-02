@@ -75,6 +75,7 @@ public class InventoryManager : MonoBehaviour
             Instantiate(img_part_prefab, nose_parent_t);
             Instantiate(img_part_prefab, mouth_parent_t);
         }
+        word_list = WordListHelper.MergeRawWordLists();
     }
 
     // Update is called once per frame

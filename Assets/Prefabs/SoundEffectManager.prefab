@@ -313,6 +313,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7003c4ad612f9ef488521f13f3ae4962, type: 3}
   - {fileID: 8300000, guid: 6a591ad4cd04ca5429af9f38be577ce8, type: 3}
   - {fileID: 8300000, guid: 66ac315f3cb48c54994285adf1133a13, type: 3}
+  - {fileID: 8300000, guid: d8643d48d78d8b645a4f097f7bfdd425, type: 3}
+  - {fileID: 8300000, guid: 538be991fbbfbd645aaaff682e8dbd3f, type: 3}
+  - {fileID: 8300000, guid: cd8eabdfc52e99642a7694071aa65529, type: 3}
   soundEffectAudio: {fileID: 7977622610296542088}
   faceMusic: {fileID: 8274789969724137279}
   votingMusic: {fileID: 4289527871502881218}

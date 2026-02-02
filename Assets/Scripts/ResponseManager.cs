@@ -41,6 +41,7 @@ public class ResponseManager : NetworkBehaviour
     public void StartFaceBuildingRoundClientRPC(string theme, string prompt)
     {
         SoundEffectManager.instance.PlayFaceMusic();
+        SoundEffectManager.instance.PlaySoundByName("DX_ChoosePrompt", 1.2f);
         SetThemeAndPrompt(theme, prompt);
         InventoryManager.instance.DealNewHand();
         roundIsActive = true;

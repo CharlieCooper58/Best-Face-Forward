@@ -142,7 +142,7 @@ public class RoundManager : NetworkBehaviour
 
     public int GetTimer()
     {
-        return (int)timer.Value;
+        return Mathf.CeilToInt(timer.Value);
     }
 
     IEnumerator WaitforPlayerResponses()
